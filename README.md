@@ -1,0 +1,2 @@
+# TallerProlog
+Practicas en clase.
