@@ -1,4 +1,9 @@
-%2.1 progenitor(padre,hijo)%
+% Hechos y Reglas Lenguajes
+% Instituto Tecnológico de Costa Rica
+% Prof: Marco Rivera
+% Alumno: Jonathan Guzmán Araya
+
+%2.1 progenitor(padre,hijo)
 % Hecho compuesto de dos elementos en el que se declara
 % como primero al padre y de segundo al hijo.
 progenitor(clara,jose).
@@ -29,7 +34,7 @@ mujer(victoria).       %
 %%%%%%%%%%%%%%%%%%%%%%%%
 tiene(juan,oro).
 padre(juan,maria).
-%presta(objeto,prestamista,beneficiado)%
+%presta(objeto,prestamista,beneficiado)
 presta(libro,juan,maria).
 presta(lapiz,juan,pedro).
 presta(borrador,pedro,juan).
