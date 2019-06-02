@@ -1,3 +1,4 @@
+:-style_check(-singleton).
 % Hechos y Reglas Lenguajes
 % Instituto Tecnológico de Costa Rica
 % Prof: Marco Rivera
@@ -34,10 +35,10 @@ mujer(victoria).       %
 %%%%%%%%%%%%%%%%%%%%%%%%
 tiene(juan,oro).
 padre(juan,maria).
-%presta(objeto,prestamista,beneficiado)
-presta(libro,juan,maria).
-presta(lapiz,juan,pedro).
-presta(borrador,pedro,juan).
+%presta(prestamista,beneficiado,objeto)
+presta(juan,maria,libro).
+presta(juan,pedro,lapiz).
+presta(pedro,juan,borrrador).
 
 %2.4 Hechos
 varon(albert).
@@ -103,8 +104,21 @@ acontecimiento(1938,italia).
 acontecimiento(1934,italia).
 acontecimiento(1930,uruguay).
 
-fechaEvento():- write("Ingrese un año de un mundial de futbol, para obtener al campeon de dicho evento")
+fechaEvento():- write("Ingrese un año de un mundial de futbol, para
+obtener al campeon de dicho evento")
 ,nl
 ,read(X)
 ,acontecimiento(X, Y)
 ,write(Y).
+
+
+resultados():-write("Resultados"),nl
+,write("El progenitor de clara es: "),progenitor(clara,A),write(A),nl
+,write("Los abuelos de Jaime son: "),abuelos(B,jaime),write(B),nl
+,write("Los bisabuelos de Jaime son: "),bisabuelos(C,jaime),write(C),nl
+,write("Pedro le presta el "), presta(pedro,D,E),write(E),write(" a "),write(D),nl
+,write("La hermana de Edward es: "),hermana_de(F,edward),write(F),nl
+,write("Es b miembro de [a,b,c]? "),miembro(b,[a,b,c]),write("true"),nl
+,write("La inversa de [a,b,c], es: "),inversa([a,b,c],G),write(G),nl
+,write("La longitud de [a,b,c,d,e,f], es: "),longitud([a,b,c,d,e,f],H),write(H),nl
+,write("Su hubo mundial en el 2002 quien lo gano? "),acontecimiento(2002,Y),write(Y),nl.
